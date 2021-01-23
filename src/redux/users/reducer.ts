@@ -1,7 +1,7 @@
 import { combineReducers } from 'redux';
 import * as types from './constants';
 import { UsersActionTypes } from './actions';
-import { Users, User } from '../../types/users';
+import { Users, FullUser } from '../../types/users';
 
 export default combineReducers({
   isLoading(state: boolean = false, action: UsersActionTypes): boolean {
@@ -21,15 +21,15 @@ export default combineReducers({
   userList(state: Users = [], action: UsersActionTypes): Users {
     switch (action.type) {
       case types.GET_USER_LIST_SUCCESS:
-        return action.result.data;
+        return action.result;
       default:
         return state;
     }
   },
-  user(state: User | {} = {}, action: UsersActionTypes): User | {} {
+  user(state: FullUser | {} = {}, action: UsersActionTypes): FullUser | {} {
     switch (action.type) {
       case types.GET_USER_SUCCESS:
-        return action.result.data;
+        return action.result;
       default:
         return state;
     }
