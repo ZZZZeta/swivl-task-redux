@@ -7,13 +7,16 @@ interface GetUserAction extends BaseAction {}
 
 export type UsersActionTypes = GetUserListAction | GetUserAction;
 
-export const getUserList = (): GetUserListAction => ({
+export const getUserList = (
+  per_page: number,
+  since: number
+): GetUserListAction => ({
   types: [
     types.GET_USER_LIST_REQUEST,
     types.GET_USER_LIST_SUCCESS,
     types.GET_USER_LIST_FAILURE,
   ],
-  promise: () => apiGetUserList(),
+  promise: () => apiGetUserList(per_page, since),
 });
 
 export const getUser = (username: string): GetUserAction => ({
