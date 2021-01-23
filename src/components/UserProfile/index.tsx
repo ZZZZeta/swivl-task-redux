@@ -1,6 +1,9 @@
 import React from 'react';
 import { FullUser } from '../../types/users';
 
+// utils
+import { parseDate } from '../../utils/parseDate';
+
 type UserProfileProps = {
   user: Partial<FullUser>;
 };
@@ -25,7 +28,7 @@ export function UserProfile({ user }: UserProfileProps) {
       <div>{name}</div>
       <div>Followers: {followers}</div>
       <div>Following: {following}</div>
-      <div>Created: {created_at}</div>
+      <div>Created: {parseDate(created_at as string)}</div>
       <div>Company: {company}</div>
       <div>{email}</div>
       <div>{location}</div>

@@ -11,7 +11,6 @@ import { selectUserList } from '../../redux/users/selectors';
 export function UserList() {
   const dispatch = useDispatch();
   const users = useSelector(selectUserList);
-  console.log(users);
 
   useEffect(() => {
     dispatch(getUserList());
