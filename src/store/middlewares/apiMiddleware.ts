@@ -1,5 +1,5 @@
 import { Middleware } from 'redux';
-import { RootState } from './redux/rootReducer';
+import { RootState } from '../../redux/rootReducer';
 
 export const apiMiddleware: Middleware<{}, RootState> = (store) => (next) => (
   action

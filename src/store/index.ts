@@ -3,7 +3,7 @@ import { createLogger } from 'redux-logger';
 import rootReducer from '../redux/rootReducer';
 
 // middlewares
-import { apiMiddleware } from '../apiMiddleware';
+import { apiMiddleware } from './middlewares/apiMiddleware';
 
 const middleware = applyMiddleware(
   apiMiddleware,

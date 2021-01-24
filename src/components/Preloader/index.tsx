@@ -1,4 +1,21 @@
 import React from 'react';
+import styled from 'styled-components';
+
+// styles
+const StyledPreloader = styled.div`
+  min-width: 100vw;
+  min-height: 100vh;
+  background-color: #fff;
+  opacity: 0.7;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 1200;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+`;
 
 type PreloaderProps = {
   isLoading: boolean;
@@ -6,24 +23,5 @@ type PreloaderProps = {
 };
 
 export function Preloader({ isLoading, message }: PreloaderProps) {
-  return isLoading ? (
-    <div
-      style={{
-        minWidth: '100vw',
-        minHeight: '100vh',
-        backgroundColor: '#fff',
-        opacity: '0.7',
-        position: 'fixed',
-        top: '0px',
-        left: '0px',
-        zIndex: 1200,
-        display: 'flex',
-        alignItems: 'center',
-        justifyContent: 'center',
-        flexDirection: 'column',
-      }}
-    >
-      {message}
-    </div>
-  ) : null;
+  return isLoading ? <StyledPreloader>{message}</StyledPreloader> : null;
 }

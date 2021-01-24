@@ -3,10 +3,7 @@ import { User } from '../../types/users';
 import { Link } from 'react-router-dom';
 import styled from 'styled-components';
 
-type UserRowProps = {
-  user: User;
-};
-
+// styles
 const Wrapper = styled.div`
   display: flex;
   flex-direction: column;
@@ -38,6 +35,10 @@ const StyledLink = styled(Link)`
   flex-direction: column;
   align-items: center;
 `;
+
+type UserRowProps = {
+  user: User;
+};
 
 export function UserRow({ user }: UserRowProps) {
   const { login, avatar_url, html_url } = user;
