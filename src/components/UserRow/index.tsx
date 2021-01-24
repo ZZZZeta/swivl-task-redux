@@ -10,10 +10,6 @@ const Wrapper = styled.div`
   align-items: center;
   width: 10%;
   margin: 10px;
-
-  &:hover {
-    opacity: 0.6;
-  }
 `;
 
 const Text = styled.p`
@@ -34,6 +30,10 @@ const StyledLink = styled(Link)`
   display: flex;
   flex-direction: column;
   align-items: center;
+
+  &:hover {
+    opacity: 0.6;
+  }
 `;
 
 type UserRowProps = {
