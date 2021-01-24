@@ -5,12 +5,13 @@ import rootReducer from '../redux/rootReducer';
 // middlewares
 import { apiMiddleware } from './middlewares/apiMiddleware';
 
-const middleware = applyMiddleware(
+const middlewares = [
   apiMiddleware,
-  createLogger({
-    collapsed: true,
-  })
-);
+  process.env.NODE_ENV === 'development' && createLogger({ collapsed: true }),
+];
+
+// @ts-ignore
+const middleware = applyMiddleware(...middlewares);
 
 const initialState = {};
 
