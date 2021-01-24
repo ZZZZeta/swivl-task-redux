@@ -1,4 +1,5 @@
 import React from 'react';
+import styled from 'styled-components';
 
 type PaginationProps = {
   onNextClick: () => void;
@@ -6,29 +7,44 @@ type PaginationProps = {
   page: number;
 };
 
-export function Pagination({ onNextClick, onPrevClick, page }: PaginationProps) {
-  const arrowStyles = {
-    border: 'solid black',
-    borderWidth: '0 3px 3px 0',
-    display: 'inline-block',
-    padding: '3px',
-  };
+const Wrapper = styled.div`
+  margin: 10px;
+  display: flex;
+  align-items: center;
+`;
 
-  const arrowLeft = {
-    transform: 'rotate(135deg)',
-    WebkitTransform: 'rotate(135deg)',
-  };
+const Arrow = styled.i`
+  border: solid black;
+  border-width: 0 3px 3px 0;
+  display: inline-block;
+  padding: 5px;
+  cursor: pointer;
+`;
 
-  const arrowRight = {
-    transform: 'rotate(-45deg)',
-    WebkitTransform: 'rotate(-45deg)',
-  };
+const ArrowLeft = styled(Arrow)`
+  transform: rotate(135deg);
+  -webkit-transform: rotate(135deg);
+`;
 
+const ArrowRight = styled(Arrow)`
+  transform: rotate(-45deg);
+  -webkit-transform: rotate(-45deg);
+`;
+
+const PageNumber = styled.div`
+  font-size: 20px;
+`;
+
+export function Pagination({
+  onNextClick,
+  onPrevClick,
+  page,
+}: PaginationProps) {
   return (
-    <div>
-      <i style={{ ...arrowStyles, ...arrowLeft }} onClick={onPrevClick} />
-      {page}
-      <i style={{ ...arrowStyles, ...arrowRight }} onClick={onNextClick} />
-    </div>
+    <Wrapper>
+      <ArrowLeft onClick={onPrevClick} />
+      <PageNumber>{page}</PageNumber>
+      <ArrowRight onClick={onNextClick} />
+    </Wrapper>
   );
 }
