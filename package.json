@@ -1,4 +1,5 @@
 {
+  "homepage": "http://zzzzeta.github.io/swivl-task-redux",
   "name": "swivl-task-redux",
   "version": "0.1.0",
   "private": true,
@@ -25,7 +26,9 @@
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
-    "eject": "react-scripts eject"
+    "eject": "react-scripts eject",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build"
   },
   "eslintConfig": {
     "extends": [
@@ -52,6 +55,7 @@
     "@types/redux": "^3.6.31",
     "@types/redux-logger": "^3.0.8",
     "@types/styled-components": "^5.1.7",
+    "gh-pages": "^3.1.0",
     "prettier": "^2.2.1",
     "redux-logger": "^3.0.6",
     "tslint": "^6.1.3",
