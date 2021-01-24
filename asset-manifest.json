@@ -1,0 +1,19 @@
+{
+  "files": {
+    "main.js": "/swivl-task-redux/static/js/main.9b902064.chunk.js",
+    "main.js.map": "/swivl-task-redux/static/js/main.9b902064.chunk.js.map",
+    "runtime-main.js": "/swivl-task-redux/static/js/runtime-main.355fe351.js",
+    "runtime-main.js.map": "/swivl-task-redux/static/js/runtime-main.355fe351.js.map",
+    "static/js/2.b8d070ce.chunk.js": "/swivl-task-redux/static/js/2.b8d070ce.chunk.js",
+    "static/js/2.b8d070ce.chunk.js.map": "/swivl-task-redux/static/js/2.b8d070ce.chunk.js.map",
+    "static/js/3.ec5c2c66.chunk.js": "/swivl-task-redux/static/js/3.ec5c2c66.chunk.js",
+    "static/js/3.ec5c2c66.chunk.js.map": "/swivl-task-redux/static/js/3.ec5c2c66.chunk.js.map",
+    "index.html": "/swivl-task-redux/index.html",
+    "static/js/2.b8d070ce.chunk.js.LICENSE.txt": "/swivl-task-redux/static/js/2.b8d070ce.chunk.js.LICENSE.txt"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.355fe351.js",
+    "static/js/2.b8d070ce.chunk.js",
+    "static/js/main.9b902064.chunk.js"
+  ]
+}
