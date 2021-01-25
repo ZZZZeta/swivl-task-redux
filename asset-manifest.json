@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.js": "/swivl-task-redux/static/js/main.52d6c6e3.chunk.js",
-    "main.js.map": "/swivl-task-redux/static/js/main.52d6c6e3.chunk.js.map",
+    "main.js": "/swivl-task-redux/static/js/main.ad2dae51.chunk.js",
+    "main.js.map": "/swivl-task-redux/static/js/main.ad2dae51.chunk.js.map",
     "runtime-main.js": "/swivl-task-redux/static/js/runtime-main.5bb5bfaf.js",
     "runtime-main.js.map": "/swivl-task-redux/static/js/runtime-main.5bb5bfaf.js.map",
     "static/js/2.70e596dd.chunk.js": "/swivl-task-redux/static/js/2.70e596dd.chunk.js",
@@ -14,6 +14,6 @@
   "entrypoints": [
     "static/js/runtime-main.5bb5bfaf.js",
     "static/js/2.70e596dd.chunk.js",
-    "static/js/main.52d6c6e3.chunk.js"
+    "static/js/main.ad2dae51.chunk.js"
   ]
 }
